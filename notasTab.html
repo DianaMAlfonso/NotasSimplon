@@ -5,52 +5,51 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NotasTab</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- SweetAlert2 -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> <!--Integración Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert2 -->
 </head>
 
 <body>
   <div class="container mt-5">
-    <h1 class="text-center mb-4">Aplicaciones de Notas</h1>
+    <h1 class="text-center mb-4">Aplicaciones de Notas</h1> <!--Título-->
 
-    <div class="mb-3">
-      <input type="text" id="noteTitle" class="form-control mb-2" placeholder="Título de la Nota">
-      <textarea id="noteContent" class="form-control mb-2" placeholder="Descripción de la Nota"></textarea>
-      <select class="form-select mb-2" id="noteCategory">
+    <div class="mb-3"> <!-- Inicio Formulario-->
+      <input type="text" id="noteTitle" class="form-control mb-2" placeholder="Título de la Nota"> <!--Campo título de la nota-->
+      <textarea id="noteContent" class="form-control mb-2" placeholder="Descripción de la Nota"></textarea> <!--Campo descripción de la nota-->
+      <select class="form-select mb-2" id="noteCategory"> <!--Campo selecciona una categoría-->
         <option selected disabled value="">Selecciona una categoría</option>
         <option value="Trabajo">Trabajo</option>
         <option value="Personal">Personal</option>
         <option value="Estudios">Estudios</option>
       </select>
-      <button class="btn btn-primary w-100 mb-3" type="button" id="addNote">Agregar Nota</button>
+      <button class="btn btn-primary w-100 mb-3" type="button" id="addNote">Agregar Nota</button> <!--Botón agregar nota-->
       
-    </div>
+    </div> <!--Fin formulario-->
 
-    <table class="table table-bordered">
-      <thead class="table-dark">
-        <tr>
-          <th>Título</th>
-          <th>Contenido</th>
-          <th>Categoría</th>
-          <th>Fecha</th>
-          <th>Acciones</th>
-        </tr>
+    <table class="table table-bordered"> <!-- Inicio Tabla de notas-->
+      <thead class="table-dark"> <!--Define la sección de encabezado de la tabla-->
+        <tr> <!--Define una fila dentro del encabezado.-->
+          <th>Título</th> <!--Columna para el título de la nota.-->
+          <th>Contenido</th> <!--Columna para el contenido de la nota-->
+          <th>Categoría</th> <!--Columna para la fecha de la nota-->
+          <th>Fecha</th> <!--Columna para la fecha de la nota.-->
+          <th>Acciones</th> <!--Columna para las acciones que se pueden realizar en la nota (editar, eliminar)-->
+        </tr> <!--Cierre del encabezado-->
       </thead>
-      <tbody id="notesTableBody">
+      <tbody id="notesTableBody"> <!--Define el cuerpo de la tabla, donde se mostrarán los datos reales de las notas.-->
       </tbody>
     </table>
-    <div class="d-flex justify-content-between align-items-center mt-3">
-        <button class="btn btn-outline-primary" id="prevPage">Anterior</button>
-        <span id="pageIndicator" class="mx-3">Página 1</span>
-        <button class="btn btn-outline-primary" id="nextPage">Siguiente</button>
+    <div class="d-flex justify-content-between align-items-center mt-3"> <!--contenedor para los elementos de paginación (botones "Anterior" y "Siguiente" y el indicador de página).-->
+        <button class="btn btn-outline-primary" id="prevPage">Anterior</button> <!--Crea un botón con el texto "Anterior"-->
+        <span id="pageIndicator" class="mx-3">Página 1</span> <!--Crea un elemento <span> para mostrar el número de página actual-->
+        <button class="btn btn-outline-primary" id="nextPage">Siguiente</button> <!--Crea un botón con el texto "Siguiente"-->
     </div>
-    <div class="mb-3 text-center">
-        <button class="btn btn-danger" type="button" id="deleteAllNotes">Eliminar Todas las Notas</button>
+    <div class="mb-3 text-center"> <!--Contenedor para el botón de eliminación de todas las notas-->
+        <button class="btn btn-danger" type="button" id="deleteAllNotes">Eliminar Todas las Notas</button> <!--Crea un botón con el texto "Eliminar Todas las Notas".-->
     </div>
   </div>
 
-  <script src="./js/notasTab.js"></script>
+  <script src="./js/notasTab.js"></script> <!--Enlaza javascript-->
 </body>
 
 </html>
